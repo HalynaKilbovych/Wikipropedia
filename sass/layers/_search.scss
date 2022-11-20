@@ -33,10 +33,20 @@
             &:hover { 
                 box-shadow: 5px 5px 10px 3px rgba(32, 32, 32, 0.3);
             }
+            &:hover > .filter__icon { 
+                transform: rotate(90deg)
+            }
         }
     }
     &__title {
         @include fonts(400, 16px, 18px, 0.03em);
         color: var(--secondary-text-color);
+    }
+    &__icon { 
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        fill: var(--secondary-text-color);
+        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 }
