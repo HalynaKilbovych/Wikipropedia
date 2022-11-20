@@ -29,7 +29,7 @@
 
     }
     &__title { 
-        font-family: 'Product Sans';
+        font-family: 'Product Sans', sans-serif;
         @include fonts(400, 24px, 44px, 0.03em);
         color: var(--text-color);
         margin-bottom: 40px;
@@ -46,6 +46,7 @@
         }
     }
     &__btn { 
+      font-size: 15px;
         display: block;
         max-width: 150px;
         padding: 10px 25px;

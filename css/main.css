@@ -298,7 +298,7 @@ img {
   }
 }
 .hero__title {
-  font-family: "Product Sans";
+  font-family: "Product Sans", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 1.8333333333;
@@ -322,6 +322,7 @@ img {
   }
 }
 .hero__btn {
+  font-size: 15px;
   display: block;
   max-width: 150px;
   padding: 10px 25px;
