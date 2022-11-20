@@ -4,6 +4,7 @@
     justify-content: $jc;
     gap: $fg;
   }
+  // @include flex-wrap(flex,wrap,30px); 
 @mixin flex-wrap ($df, $dw, $dg) { 
   display: $df;
   flex-wrap: $dw;

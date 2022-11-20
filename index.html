@@ -5,7 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home page</title>
-
+    <link 
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
@@ -36,7 +42,7 @@
             </div>
 
             <button type="button" class="mob-menu__open-btn" data-menu-open>
-                <svg class="mob-menu__icon" width="40" height="40">
+                <svg class="mob-menu__icon" width="30" height="30">
                   <use href="./images/icons.svg#icon-menu_open"></use>
                 </svg>
               </button>
@@ -46,7 +52,7 @@
                 <div class="container">
                   <div class="mob-menu__content">
                     <button type="button" class="mob-menu__close-btn" data-menu-close>
-                      <svg class="mob-menu__icon" width="40" height="40">
+                      <svg class="mob-menu__icon" width="30" height="30">
                         <use href="./images/icons.svg#icon-menu_close"></use>
                       </svg>
                     </button>
@@ -67,7 +73,7 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section class="hero section">
             <div class="container">
                 <div class="hero__content">
                     <h1 class="hero__title">Lawyer for a successful case in court</h1>
@@ -80,215 +86,247 @@
             </div>
         </section>
 
-        <section class="lawyers">
+        <section class="lawyers section">
             <div class="container">
                 <h2 class="lawyers__title title">Meet our Lawyers</h2>
 
                 <div class="lawyers__filter-wrapper">
+
                     <form class="lawyers__filter">
-                        <input type="text"  name="name" placeholder=" " class="lawyers__filter-input">
-                        <button type="submit">Search</button>
+                        <div class="lawyers__filter-field">
+                              <input type="text" name="name" id="filter-name" placeholder=" " class="lawyers__filter-input" required>
+                              <label for="filter-name" class="lawyers__filter-label">Name</label>
+                              <svg class="lawyers__filter-icon" width="18" height="18">
+                                <use href="./images/icons.svg#icon-search"></use>
+                              </svg>
+                        </div>
+                        <button type="submit" class="lawyers__filter-btn btn">Search</button>
                     </form>
                 </div>
     
                 <ul class="lawyers__card-list list">
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
                     <li class="lawyers__card-item">
                         <a href="" class="lawyers__card-link link">
+                            <div class="lawyers__image-wrapper">
+                                <img src="./images/Rectangle 16.jpg" alt="">
+                            </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
                                 <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating:</p>
-                                <p class="lawyers__card-reviews">2 Reviews, 1 Recommendations</p>
+                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-adress">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
+                    
                 </ul>
             </div>
         </section>
 
-        <section class="search">
+        <section class="search section">
             <div class="container">
                 <h2 class="search__title title">Find a specialist</h2>
                 <div class="filter">
@@ -298,6 +336,9 @@
                         <li class="filter__specialization-item"></li>
                         <li class="filter__specialization-item"></li>
                       </ul>
+                      <svg class="filter__icon" width="30" height="30">
+                        <use href="./images/icons.svg#icon-arrow"></use>
+                      </svg>
                     </div>
                     <div class="filter__wrapper">
                       <h3 class="filter__title">Select a location</h3>
@@ -305,12 +346,15 @@
                         <li class="filter__specialization-item"></li>
                         <li class="filter__specialization-item"></li>
                       </ul>
+                      <svg class="filter__icon" width="30" height="30">
+                        <use href="./images/icons.svg#icon-arrow"></use>
+                      </svg>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="testimonials">
+        <section class="testimonials section">
             <div class="container testimonials__container">
               <h2 class="testimonials__title title">Reviews about the service</h2>
               <div class="swiper">
@@ -402,7 +446,7 @@
           </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer section">
         <p class="footer__text">© 2021-2022 CrabPulsar LLC. All rights reserved. Contact us
         </p>
     </footer>
