@@ -15,7 +15,6 @@
     }
 
     &__item {
-        padding-top: 35px;
         @include tablet { 
             @include flex (flex, center, space-between, null);
         }
@@ -40,16 +39,27 @@
     }
     &__name {
         @include fonts(400, 16px, 18px, 0.03em);
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     &__subtitle {
         @include fonts(400, 12px, 14px, 0.03em);
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     &__text {
         @include fonts(400, 14px, 20px, 0.03em);
         color: var(--secondary-text-color);
     }
+    &__stars { 
+        margin-bottom: 18px;
+    }
+    &__stars-list {
+        display: flex;
+        gap: 5px;
+    }
+    &__stars-icon {
+        fill: #FFCF02;
+    }
+
 }
 
 .swiper-button-prev::after,.swiper-button-next::after  { 

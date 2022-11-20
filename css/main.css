@@ -583,9 +583,6 @@ img {
 .swiper:hover, .swiper:focus {
   box-shadow: 5px 5px 10px 3px rgba(32, 32, 32, 0.3);
 }
-.swiper__item {
-  padding-top: 35px;
-}
 @media screen and (min-width: 768px) {
   .swiper__item {
     display: flex;
@@ -615,14 +612,14 @@ img {
   font-size: 16px;
   line-height: 1.125;
   letter-spacing: 0.03em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .swiper__subtitle {
   font-weight: 400;
   font-size: 12px;
   line-height: 1.1666666667;
   letter-spacing: 0.03em;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .swiper__text {
   font-weight: 400;
@@ -630,6 +627,16 @@ img {
   line-height: 1.4285714286;
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
+}
+.swiper__stars {
+  margin-bottom: 18px;
+}
+.swiper__stars-list {
+  display: flex;
+  gap: 5px;
+}
+.swiper__stars-icon {
+  fill: #FFCF02;
 }
 
 .swiper-button-prev::after, .swiper-button-next::after {
@@ -650,4 +657,14 @@ img {
   line-height: 2;
   letter-spacing: 2;
   background-color: var(--accent-color);
+}
+
+.footer {
+  background-color: #F2F2F2;
+}
+
+.footer__text {
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--secondary-text-color);
 }/*# sourceMappingURL=main.css.map */
