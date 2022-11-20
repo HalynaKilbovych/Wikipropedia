@@ -1,26 +1,10 @@
-.container {
+.testimonials { 
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #D9D9D9;
 }
-.testimonials__container {
-}
-.testimonials__title {
-}
-.title {
-}
-.swiper {
-}
-.swiper-wrapper {
-}
-.swiper-slide {
-}
-.swiper__item {
-}
-.swiper__img {
-}
-
-
-
 .swiper { 
-    padding: 30px;
+    padding: 35px; 
     max-width: 800px;
     box-shadow: 5px 5px 10px 3px rgba(141, 141, 141, 0.3);
     border-radius: 7px;
@@ -31,7 +15,7 @@
     }
 
     &__item {
-        padding: 35px;
+        padding-top: 35px;
         @include tablet { 
             @include flex (flex, center, space-between, null);
         }
