@@ -25,9 +25,9 @@
         &:not(:placeholder-shown) + .lawyers__filter-label { 
             transform: translateY(-45px);
         }
-        &:hover { 
-            box-shadow: var(--hover-shadow)
-        }
+        // &:hover { 
+        //     box-shadow: var(--hover-shadow)
+        // }
         &:hover > .filter__icon { 
             transform: translateY(-50%) rotate(90deg);
         }

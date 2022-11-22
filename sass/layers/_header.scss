@@ -40,7 +40,9 @@
     }
     &__close-btn, 
     &__open-btn  {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-left: auto;
       background-color: var(--accent-color);
       border: none;

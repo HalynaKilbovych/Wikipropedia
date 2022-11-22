@@ -162,7 +162,9 @@ img {
   height: 100%;
 }
 .mob-menu__close-btn, .mob-menu__open-btn {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   background-color: var(--accent-color);
   border: none;
@@ -339,9 +341,6 @@ img {
 .lawyers__filter-input:not(:placeholder-shown) + .lawyers__filter-label {
   transform: translateY(-45px);
 }
-.lawyers__filter-input:hover {
-  box-shadow: var(--hover-shadow);
-}
 .lawyers__filter-input:focus {
   outline: 1px solid var(--accent-color);
 }
@@ -378,7 +377,7 @@ img {
 .lawyers__card-item {
   flex-basis: 100%;
   background-color: #ffffff;
-  border: 1px solid #EDEDED;
+  box-shadow: 2px 2px 10px 5px rgba(211, 211, 211, 0.2);
   border-radius: 7px;
   padding: 20px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -392,9 +391,6 @@ img {
   .lawyers__card-item {
     flex-basis: calc((100% - 90px) / 4);
   }
-}
-.lawyers__card-item:hover, .lawyers__card-item:focus {
-  box-shadow: var(--hover-shadow);
 }
 .lawyers__card-link {
   color: var(--secondary-text-color);
@@ -428,21 +424,16 @@ img {
   color: var(--link-color);
 }
 .lawyers__card-specialization {
-  font-size: 12px;
+  font-size: 14px;
 }
-.lawyers__card-practice-area, .lawyers__card-rating, .lawyers__card-address {
-  font-size: 10px;
-  line-height: 16px;
+.lawyers__card-practice-area, .lawyers__card-rating, .lawyers__card-address, .lawyers__card-text-about {
+  font-size: 14px;
+  line-height: 20px;
   color: #616161;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.lawyers__card-practice-area:hover, .lawyers__card-practice-area:focus, .lawyers__card-rating:hover, .lawyers__card-rating:focus, .lawyers__card-address:hover, .lawyers__card-address:focus {
+.lawyers__card-practice-area:hover, .lawyers__card-practice-area:focus, .lawyers__card-rating:hover, .lawyers__card-rating:focus, .lawyers__card-address:hover, .lawyers__card-address:focus, .lawyers__card-text-about:hover, .lawyers__card-text-about:focus {
   color: var(--link-color);
-}
-.lawyers__card-text-about {
-  font-size: 14px;
-  line-height: 20px;
-  color: var(--text-color);
 }
 .lawyers .lawyers__stars-list {
   display: flex;
@@ -496,9 +487,6 @@ img {
 .filter__wrapper:not(:placeholder-shown) + .lawyers__filter-label {
   transform: translateY(-45px);
 }
-.filter__wrapper:hover {
-  box-shadow: var(--hover-shadow);
-}
 .filter__wrapper:hover > .filter__icon {
   transform: translateY(-50%) rotate(90deg);
 }
@@ -530,9 +518,6 @@ img {
   border: 1px solid #EDEDED;
   border-radius: 7px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.swiper:hover, .swiper:focus {
-  box-shadow: var(--hover-shadow);
 }
 @media screen and (min-width: 768px) {
   .swiper__item {
