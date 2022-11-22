@@ -1,15 +1,11 @@
 .hero { 
-    padding: 70px 0;
+    padding: 40px 0;
     background-color: #ffffff;
-    background-image: url(../images/hero-bg-mob-min.svg);
     background-repeat: no-repeat;
-    background-position: right bottom;
+    background-position: right 50px bottom;
     background-size: 153px 300px; 
-
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #D9D9D9;
       @include tablet {
+        padding: 70px 0;
         background-image: url(../images/hero-bg-tab-min.svg);
         background-size: 445px 235px;
       }
@@ -19,9 +15,10 @@
         background-size: 773px 415px;
       }
     &__content { 
-        max-width: 145px;
+        text-align: center;
         @include mobile { 
-            max-width: 300px;
+          text-align: left;
+            max-width: 500px;
         }
         @include tablet { 
             max-width: 400px;
@@ -30,20 +27,23 @@
     }
     &__title { 
         font-family: 'Product Sans', sans-serif;
-        @include fonts(400, 24px, 44px, 0.03em);
+        @include fonts(400, 30px, 44px, 0.03em);
         color: var(--text-color);
         margin-bottom: 40px;
-        @include tablet { 
+        @include tablet {   
           font-size: 36px;
         }
     }
     &__btn-list { 
+      display: none;
+      @include tablet { 
         display: flex;
         gap: 20px; 
         flex-direction: column; 
         @include tablet { 
             flex-direction: row;
         }
+      }
     }
     &__btn { 
       font-size: 15px;

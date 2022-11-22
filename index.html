@@ -22,27 +22,25 @@
         <div class="container header__container">
             <div class="logo">
                 <a class="logo__img" href="#">
-                    <img src="./images/logo.jpg" alt="" width="285" height="70">
+                    <img src="./images/logo.svg" alt="" width="285" height="70">
                 </a>
             </div>
 
             <nav class="navigation">
                 <ul class="navigation__list list">
-                    <li class="navigation__item"><a href="" class="navigation__link link">Menu item</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link link">Menu item</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link link">Menu item</a></li>
-                    <li class="navigation__item"><a href="" class="navigation__link link">Menu item</a></li>
+                    <li class="navigation__item"><a href="#testimonials-section" class="navigation__link link">Reviews</a></li>
+                    <li class="navigation__item"><a href="#search-section" class="navigation__link link">Search</a></li>
                 </ul>
             </nav>
         
-            <div class="header__button">
+            <!-- <div class="header__button">
                 <button type="button" class="header__button-click btn">click here</button>
                 <button type="button" class="header__button-avatar">                
                 <svg class="header__button-avatar-icon" width="40" height="40">
                     <use href="./images/icons.svg#icon-avatar"></use>
                   </svg>
                 </button>
-            </div>
+            </div> -->
 
             <button type="button" class="mob-menu__open-btn" data-menu-open>
                 <svg class="mob-menu__icon" width="30" height="30">
@@ -62,10 +60,8 @@
 
                     <nav class="mob-menu__navigation">
                         <ul class="mob-menu__navigation__list list">
-                            <li class="mob-menu__navigation__item"><a href="" class="mob-menu__navigation__link link">Menu item</a></li>
-                            <li class="mob-menu__navigation__item"><a href="" class="mob-menu__navigation__link link">Menu item</a></li>
-                            <li class="mob-menu__navigation__item"><a href="" class="mob-menu__navigation__link link">Menu item</a></li>
-                            <li class="mob-menu__navigation__item"><a href="" class="mob-menu__navigation__link link">Menu item</a></li>
+                            <li class="mob-menu__navigation__item"><a href="#testimonials-section" class="mob-menu__navigation__link link">Reviews</a></li>
+                            <li class="mob-menu__navigation__item"><a href="#search-section" class="mob-menu__navigation__link link">Search</a></li>
                         </ul>
                     </nav>
                   </div>
@@ -79,10 +75,10 @@
         <section class="hero section">
             <div class="container">
                 <div class="hero__content">
-                    <h1 class="hero__title">Lawyer for a successful case in court</h1>
+                    <h1 class="hero__title">The wiki of professional services. Lawyers</h1>
                     <div class="hero__btn-list">
-                        <a class="hero__btn link btn" href="">go to benefits</a>
-                        <a class="hero__btn link btn" href="">go to list</a>
+                        <a class="hero__btn link btn" href="#search-section">Search</a>
+                        <a class="hero__btn link btn" href="#testimonials-section">Reviews</a>
                     </div>
 
                 </div>
@@ -98,7 +94,7 @@
                     <form class="lawyers__filter">
                         <div class="lawyers__filter-field">
                               <input type="text" name="name" id="filter-name" placeholder=" " class="lawyers__filter-input" required>
-                              <label for="filter-name" class="lawyers__filter-label">Name</label>
+                              <!-- <label for="filter-name" class="lawyers__filter-label">Name</label> -->
                               <svg class="lawyers__filter-icon" width="18" height="18">
                                 <use href="./images/icons.svg#icon-search"></use>
                               </svg>
@@ -116,13 +112,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -134,13 +152,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -152,13 +192,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -170,13 +232,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -188,13 +272,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -206,13 +312,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -224,13 +352,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -242,13 +392,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -260,13 +432,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -278,13 +472,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -296,13 +512,35 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
@@ -314,22 +552,43 @@
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">James "Jake" Gilbreath</p>
                                 <p class="lawyers__card-specialization">Partner at Walters Gilbreath, PLLC</p>
-                                <p class="lawyers__card-practice-area">Practice area: Divorce and separation, Child custody, Family</p>
-                                <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p>
+                                <p class="lawyers__card-practice-area">Divorce and separation, Child custody, Family</p>
+                                <!-- <p class="lawyers__card-rating">Rating: <span>2 Reviews, 1 Recommendations</span></p> -->
+                                <ul class="lawyers__stars-list list">
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                            
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                    <li class="lawyers__stars-item">                           
+                                    <svg class="lawyers__stars-icon" width="16" height="16">
+                                        <use href="./images/icons.svg#icon-star"></use>
+                                      </svg></li>
+                                </ul>
                                 <p class="lawyers__card-text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vel arcu ut turpis commodo fermentum. 
                                     Duis ac felis sem. Cras ac enim non dui porta interdum id.Duis ac felis sem. Cras ac enim non dui porta interdum id.
                                     <span>Read more</span>
                                 </p> 
-                                <p class="lawyers__card-address">Address: 508 W. 12th Street, Austin, TX, USA</p>
+                                <p class="lawyers__card-address">508 W. 12th Street, Austin, TX, USA</p>
                             </div>
                         </a>
                     </li>
-                    
                 </ul>
             </div>
         </section>
 
-        <section class="search section">
+        <section class="search section" id="search-section">
             <div class="container">
                 <h2 class="search__title title">Find a specialist</h2>
                 <div class="filter">
@@ -357,15 +616,12 @@
             </div>
         </section>
 
-        <section class="testimonials section">
+        <section class="testimonials section" id="testimonials-section">
             <div class="container testimonials__container">
-              <h2 class="testimonials__title title">Reviews about the service</h2>
+              <h2 class="testimonials__title title">Customers about Us</h2>
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide swiper__item">
-                    <div class="swiper__img">
-                      <img src="./images/Rectangle16.jpg" alt="" width="164" height="164">
-                    </div>
                     <div class="swiper__content">
                         <p class="swiper__name">Stephanie Engle</p>
                         <p class="swiper__subtitle">Lorem ipsum dolor sit amet</p>
@@ -402,17 +658,12 @@
                             Cras lacinia odio sed molestie vestibulum. 
                             Etiam aliquet dapibus turpis, quis laoreet dui varius eget. 
                             Integer leo elit, malesuada sit amet varius eu, interdum quis mi. 
-                            Integer convallis rutrum lacus, sed venenatis odio congue in. Suspendisse potenti. 
-                            Quisque non venenatis tellus. Curabitur accumsan erat in dolor interdum, 
-                            in accumsan augue mattis. Fusce mollis massa quis nisl vulputate gravida.
+                        
                         </p>
                     </div>
 
                   </div>
                   <div class="swiper-slide swiper__item">
-                    <div class="swiper__img">
-                      <img src="./images/Rectangle16.jpg" alt="" width="164" height="164">
-                    </div>
                     <div class="swiper__content">
                         <p class="swiper__name">Stephanie Engle</p>
                         <p class="swiper__subtitle">Lorem ipsum dolor sit amet</p>
@@ -448,17 +699,12 @@
                             Cras lacinia odio sed molestie vestibulum. 
                             Etiam aliquet dapibus turpis, quis laoreet dui varius eget. 
                             Integer leo elit, malesuada sit amet varius eu, interdum quis mi. 
-                            Integer convallis rutrum lacus, sed venenatis odio congue in. Suspendisse potenti. 
-                            Quisque non venenatis tellus. Curabitur accumsan erat in dolor interdum, 
-                            in accumsan augue mattis. Fusce mollis massa quis nisl vulputate gravida.
+                        
                         </p>
                     </div>
 
                   </div>
                   <div class="swiper-slide swiper__item">
-                    <div class="swiper__img">
-                      <img src="./images/Rectangle16.jpg" alt="" width="164" height="164">
-                    </div>
                     <div class="swiper__content">
                         <p class="swiper__name">Stephanie Engle</p>
                         <p class="swiper__subtitle">Lorem ipsum dolor sit amet</p>
@@ -494,17 +740,12 @@
                             Cras lacinia odio sed molestie vestibulum. 
                             Etiam aliquet dapibus turpis, quis laoreet dui varius eget. 
                             Integer leo elit, malesuada sit amet varius eu, interdum quis mi. 
-                            Integer convallis rutrum lacus, sed venenatis odio congue in. Suspendisse potenti. 
-                            Quisque non venenatis tellus. Curabitur accumsan erat in dolor interdum, 
-                            in accumsan augue mattis. Fusce mollis massa quis nisl vulputate gravida.
+                        
                         </p>
                     </div>
 
                   </div>
                   <div class="swiper-slide swiper__item">
-                    <div class="swiper__img">
-                      <img src="./images/Rectangle16.jpg" alt="" width="164" height="164">
-                    </div>
 
                     <div class="swiper__content">
                         <p class="swiper__name">Stephanie Engle</p>
@@ -541,18 +782,12 @@
                             Cras lacinia odio sed molestie vestibulum. 
                             Etiam aliquet dapibus turpis, quis laoreet dui varius eget. 
                             Integer leo elit, malesuada sit amet varius eu, interdum quis mi. 
-                            Integer convallis rutrum lacus, sed venenatis odio congue in. Suspendisse potenti. 
-                            Quisque non venenatis tellus. Curabitur accumsan erat in dolor interdum, 
-                            in accumsan augue mattis. Fusce mollis massa quis nisl vulputate gravida.
+                        
                         </p>
                     </div>
 
                   </div>
                   <div class="swiper-slide swiper__item">
-                    <div class="swiper__img">
-                      <img src="./images/Rectangle16.jpg" alt="" width="164" height="164">
-                    </div>
-
                     <div class="swiper__content">
                         <p class="swiper__name">Stephanie Engle</p>
                         <p class="swiper__subtitle">Lorem ipsum dolor sit amet</p>
@@ -588,17 +823,12 @@
                             Cras lacinia odio sed molestie vestibulum. 
                             Etiam aliquet dapibus turpis, quis laoreet dui varius eget. 
                             Integer leo elit, malesuada sit amet varius eu, interdum quis mi. 
-                            Integer convallis rutrum lacus, sed venenatis odio congue in. Suspendisse potenti. 
-                            Quisque non venenatis tellus. Curabitur accumsan erat in dolor interdum, 
-                            in accumsan augue mattis. Fusce mollis massa quis nisl vulputate gravida.
+                        
                         </p>
                     </div>
 
                   </div>
                   <div class="swiper-slide swiper__item">
-                    <div class="swiper__img">
-                      <img src="./images/Rectangle16.jpg" alt="" width="164" height="164">
-                    </div>
 
                     <div class="swiper__content">
                         <p class="swiper__name">Stephanie Engle</p>
@@ -635,9 +865,7 @@
                             Cras lacinia odio sed molestie vestibulum. 
                             Etiam aliquet dapibus turpis, quis laoreet dui varius eget. 
                             Integer leo elit, malesuada sit amet varius eu, interdum quis mi. 
-                            Integer convallis rutrum lacus, sed venenatis odio congue in. Suspendisse potenti. 
-                            Quisque non venenatis tellus. Curabitur accumsan erat in dolor interdum, 
-                            in accumsan augue mattis. Fusce mollis massa quis nisl vulputate gravida.
+                            
                         </p>
                       </div>
                     </div>
@@ -655,7 +883,7 @@
 
     <footer class="footer section">
         <div class="container">
-            <p class="footer__text">© 2021-2022 CrabPulsar LLC. All rights reserved. Contact us
+            <p class="footer__text">© 2021-2022 CrabPulsar LLC. All rights reserved. <a href="" class="footer__link link">Contact us</a> 
             </p>
         </div>
 

@@ -30,7 +30,10 @@
   }
 
 .section { 
-  padding: 100px 0;
+  padding: 40px 0; 
+  @include tablet { 
+    padding: 100px 0; 
+  }
 }
 
 .is-hidden {

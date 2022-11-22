@@ -18,15 +18,14 @@
         @include fonts(400, 14px, 18px, 0.03em);
         color: var(--secondary-text-color);
         background: rgba(255, 255, 255, 0.1);
-        box-shadow: var(--main-shadow);
-        border: 0;
+        border: 1px solid #EDEDED;
         border-radius: 17px;
         transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
         &:not(:placeholder-shown) + .lawyers__filter-label { 
             transform: translateY(-45px);
         }
         &:hover { 
-            box-shadow: 5px 5px 10px 3px rgba(32, 32, 32, 0.3);
+            box-shadow: var(--hover-shadow)
         }
         &:focus{ 
         outline: 1px solid var(--accent-color);
@@ -44,15 +43,15 @@
         transform: translateY(-50%);
         transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
-    &__filter-label {
-        position: absolute;
-        left: 39px;
-        top: 50%;
-        transform: translateY(-50%);
-        @include fonts(400, 16px, 18px, 0.03em);
-        color: #C9C9C9;
-        transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
+    // &__filter-label {
+    //     position: absolute;
+    //     left: 39px;
+    //     top: 50%;
+    //     transform: translateY(-50%);
+    //     @include fonts(400, 16px, 18px, 0.03em);
+    //     color: #C9C9C9;
+    //     transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    // }
     &__filter-btn { 
         flex-basis: 100%;
         height: 35px;
@@ -60,7 +59,7 @@
             flex-basis: 190px;
         }
         &:hover { 
-            box-shadow: 5px 5px 10px 3px rgba(32, 32, 32, 0.3);
+            box-shadow: var(--hover-shadow)
         }
     }
     &__card-list {
@@ -69,9 +68,10 @@
     &__card-item {
         flex-basis: 100%;
         background-color: #ffffff;
-        box-shadow: 5px 5px 10px 3px rgba(141, 141, 141, 0.3);
+        // box-shadow: 5px 5px 10px 3px rgba(141, 141, 141, 0.3);
+        border: 1px solid #EDEDED;
         border-radius: 7px;
-        padding: 12px 25px;
+        padding: 20px;
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
             @include tablet {
               flex-basis: calc((100% - 30px) / 2);
@@ -81,7 +81,7 @@
             }
             &:hover,
             &:focus {
-                box-shadow: 5px 5px 10px 3px rgba(32, 32, 32, 0.3);
+                box-shadow: var(--hover-shadow)
             }
         }
     &__card-link {
@@ -94,11 +94,8 @@
     }
     &__image-wrapper { 
         position: relative; 
-        margin-left: auto;
-        margin-right: auto;
         margin-bottom: 20px;
-        width: 184px;
-        height: 191px;
+        width: 170px;
         border-radius: 5px;
         overflow: hidden;
         box-shadow: (0px 4px 5px rgba(99, 99, 99, 0.25));
@@ -110,22 +107,20 @@
         font-family: 'Product Sans';
         @include fonts(400, 18px, 19px, 0.03em);
         color: var(--text-color);
-        text-align: center;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         &:hover,
         &:focus {
             color: var(--link-color);
         }
-        &::after { 
-            content: "";
-            display: block;
-            width: 100%;
-            height: 1px;
-            background-color: #D9D9D9;;
-        }
+        // &::after { 
+        //     content: "";
+        //     display: block;
+        //     width: 100%;
+        //     height: 1px;
+        //     background-color: #D9D9D9;;
+        // }
     }
     &__card-specialization { 
-        text-align: center;
         font-size: 12px;
     }
     &__card-practice-area,
@@ -144,5 +139,12 @@
         font-size: 14px;
         line-height: 20px;
         color: var(--text-color);
+    }
+    .lawyers__stars-list {
+        display: flex;
+        gap: 5px;
+    }
+    .lawyers__stars-icon {
+        fill: #FFCF02;
     }
 }

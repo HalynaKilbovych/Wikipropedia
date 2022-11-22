@@ -1,6 +1,25 @@
+.header { 
+  padding: 20px 0;
+  margin-bottom: 10px;
+  box-shadow: var(--main-shadow);
+  &__container { 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    
+  }
+
+}
 .logo { 
-    width: 285px;
-    height: 70px;
+    display: flex;
+    align-items: center;
+
+
+    width: 150px; 
+
+    @include tablet { 
+      width: 285px;
+    }
 }
 
 .mob-menu {
@@ -9,17 +28,15 @@
     z-index: 1;
     top: 0;
     right: 0;
-    width: 90vw;
-    height: 70vh;
-    padding: 10px;
+    width: 70vw;
+    height: 40vh;
+    padding: 20px 15px 50px;
+    border: 1px solid #EDEDED;
+    border-radius: 5px;
+    box-shadow: var(--main-shadow);
     > .container {
       width: 100%;
       height: 100%;
-      padding-left: 0px;
-      padding-right: 0px;
-    }
-    &__close-btn { 
-      margin-top: 10px;
     }
     &__close-btn, 
     &__open-btn  {
@@ -28,17 +45,25 @@
       background-color: var(--accent-color);
       border: none;
       border-radius: 5px;
+      fill: #ffffff;
+      width: 40px;
+      height: 40px;
       transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
       &:hover,
       &:focus {
-        fill: #F3F3F3;
+        fill: #E7E7E7;
       }
     }
+    &__open-btn { 
+      @include tablet { 
+      display: none;
+      }
+  }
     &__navigation__item:not(:last-child) {
-      margin-bottom: 12px; 
+      margin-bottom: 20px; 
     }
     &__navigation__link {
-        @include fonts (500, 20px, 37px, 0.02em);
+        @include fonts (500, 25px, 37px, 0.02em);
         color: var(--text-color);
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
         &:hover,
@@ -48,43 +73,15 @@
   }
 }
 
-.mob-menu__open-btn { 
-    @include tablet { 
-    display: none;
-    }
-}
-.mob-connect { 
-    padding-left: 40px;
-    padding-bottom: 48px
-}
   
-.navigation, .header__button, .logo{ 
+.navigation { 
     display: none;
     @include tablet { 
       display: block;
     }
   }
 
-  .logo { 
-    width: 285px;
-    height: 70px;
-}
-.header { 
-    padding: 20px 0;
-    margin-bottom: 10px;
-    box-shadow: var(--main-shadow);
-    &__container { 
-        display: flex;
-        @include tablet { 
-            justify-content: space-between;
-            align-items: center;
-        }
-    }
-
-}
-
 .navigation {
-    
     &__list {
         @include tablet { 
             display: flex;
@@ -105,26 +102,3 @@
     }
     }
 } 
-.header__button { 
-    display: none;
-
-    @include desktop { 
-        @include flex(flex, center, space-between, 20px);
-    }
-}
-.header__button-click {
-    width: 140px;
-    height: 35px;
-}
-.header__button-avatar {
-    background-color: #ffffff;
-    border: 0;
-}
-.header__button-avatar-icon { 
-    fill: #515151;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    &:hover,
-    &:focus {
-        fill: var(--hover-accent-color);
-}
-}

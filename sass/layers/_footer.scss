@@ -1,8 +1,13 @@
 .footer { 
-    background-color: #F2F2F2;;
-}
-.footer__text { 
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--secondary-text-color)
+    background-color: #F2F2F2;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    &__text { 
+        font-size: 14px;
+        line-height: 16px;
+        color: var(--secondary-text-color)
+    }
+    &__link { 
+        color: var(--link-color);
+    }
 }
