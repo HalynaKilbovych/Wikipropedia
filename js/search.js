@@ -1,4 +1,5 @@
-import { search } from "./data.js";
+import { search } from "./new.data.js";
+import { searchAll } from "./data.js";
 
 const lawyersCardList = document.querySelector(".lawyers__card-list");
 const filter = document.querySelector("#filter-name");
@@ -39,7 +40,7 @@ lawyersCardList.innerHTML = createLawyersMarkup(search);
 function onFilterChange(e) {
   const filter = e.target.value.toLowerCase();
 
-  const filteredLawyers = search.filter(({ name }) =>
+  const filteredLawyers = searchAll.filter(({ name }) =>
     name.toLowerCase().includes(filter)
   );
 

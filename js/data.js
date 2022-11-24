@@ -1,4 +1,4 @@
-export const search = [ 
+export const searchAll = [ 
   { 
       profilePhoto: "/cdn/img/112x149/lawyer_howard_castleman_934549_1522964179.jpg", 
       name: "Howard Castleman", 
