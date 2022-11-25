@@ -2,7 +2,7 @@ import { search } from "./new.data.js";
 import { searchAll } from "./data.js";
 
 const lawyersCardList = document.querySelector(".lawyers__card-list");
-const filter = document.querySelector("#filter-name");
+const searchField = document.querySelector("#search-field");
 
 function createLawyersMarkup(lawyers) {
   return lawyers
@@ -37,18 +37,20 @@ function createLawyersMarkup(lawyers) {
 
 lawyersCardList.innerHTML = createLawyersMarkup(search);
 
-function onFilterChange(e) {
-  const filter = e.target.value.toLowerCase();
+function onSearchChange(e) { 
+  e.preventDefault(); 
+  const searchEl = e.target.value.toLowerCase();
 
-  const filteredLawyers = searchAll.filter(({ name, jobTitle, practiceArea, profileDescription}) =>
-    name.toLowerCase().includes(filter) || 
-    jobTitle.toLowerCase().includes(filter) ||  
-    practiceArea.toLowerCase().includes(filter) || 
-    profileDescription.toLowerCase().includes(filter) 
+  const searchedLawyers = searchAll.filter(({ name, jobTitle, practiceArea, profileDescription}) =>
+    name.toLowerCase().includes(searchEl) || 
+    jobTitle.toLowerCase().includes(searchEl) ||  
+    practiceArea.toLowerCase().includes(searchEl) 
+    // profileDescription.toLowerCase().includes(filter) 
   );
 
-  lawyersCardList.innerHTML = createLawyersMarkup(filteredLawyers);
+  lawyersCardList.innerHTML = createLawyersMarkup(searchedLawyers);
 }
 
 
-filter.addEventListener('input', _.debounce(onFilterChange, 1500));
+searchField.addEventListener('input', _.debounce(onSearchChange, 1500));
+

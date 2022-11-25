@@ -302,23 +302,23 @@ img {
   line-height: 15px;
 }
 
-.lawyers__filter {
+.lawyers__search {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
   margin-bottom: 30px;
 }
-.lawyers__filter-field {
+.lawyers__search-field {
   position: relative;
   flex-basis: 100%;
 }
 @media screen and (min-width: 768px) {
-  .lawyers__filter-field {
+  .lawyers__search-field {
     flex-basis: auto;
   }
 }
-.lawyers__filter-input {
+.lawyers__search-input {
   width: 100%;
   height: 35px;
   padding-left: 40px;
@@ -332,24 +332,24 @@ img {
   border-radius: 17px;
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.lawyers__filter-input:not(:-moz-placeholder-shown) + .lawyers__filter-label {
+.lawyers__search-input:not(:-moz-placeholder-shown) + .lawyers__filter-label {
   transform: translateY(-45px);
 }
-.lawyers__filter-input:not(:-ms-input-placeholder) + .lawyers__filter-label {
+.lawyers__search-input:not(:-ms-input-placeholder) + .lawyers__filter-label {
   transform: translateY(-45px);
 }
-.lawyers__filter-input:not(:placeholder-shown) + .lawyers__filter-label {
+.lawyers__search-input:not(:placeholder-shown) + .lawyers__filter-label {
   transform: translateY(-45px);
 }
-.lawyers__filter-input:focus {
+.lawyers__search-input:focus {
   outline: 1px solid var(--accent-color);
 }
 @media screen and (min-width: 768px) {
-  .lawyers__filter-input {
+  .lawyers__search-input {
     width: 410px;
   }
 }
-.lawyers__filter-icon {
+.lawyers__search-icon {
   position: absolute;
   left: 10px;
   top: 50%;
@@ -357,16 +357,16 @@ img {
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.lawyers__filter-btn {
+.lawyers__search-btn {
   flex-basis: 100%;
   height: 35px;
 }
 @media screen and (min-width: 768px) {
-  .lawyers__filter-btn {
+  .lawyers__search-btn {
     flex-basis: 190px;
   }
 }
-.lawyers__filter-btn:hover {
+.lawyers__search-btn:hover {
   box-shadow: var(--hover-shadow);
 }
 .lawyers__card-list {
@@ -443,11 +443,11 @@ img {
   fill: #FFCF02;
 }
 
-.search {
+.filter-section {
   box-shadow: 3px 3px 20px rgba(141, 141, 141, 0.2);
 }
 @media screen and (min-width: 1200px) {
-  .search {
+  .filter-section {
     background-image: url(../images/search-bg-min.svg);
     background-repeat: no-repeat;
     background-position: right 50px center;
@@ -467,31 +467,37 @@ img {
     align-items: start;
   }
 }
-.filter__wrapper {
-  width: 100%;
-  padding: 20px;
+.filter__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.filter__field {
   position: relative;
+  padding: 20px;
   border: 1px solid #EDEDED;
   border-radius: 25px;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.filter__wrapper:not(:-moz-placeholder-shown) + .lawyers__filter-label {
+.filter__field:not(:-moz-placeholder-shown) + .lawyers__filter-label {
   transform: translateY(-45px);
 }
-.filter__wrapper:not(:-ms-input-placeholder) + .lawyers__filter-label {
+.filter__field:not(:-ms-input-placeholder) + .lawyers__filter-label {
   transform: translateY(-45px);
 }
-.filter__wrapper:not(:placeholder-shown) + .lawyers__filter-label {
+.filter__field:not(:placeholder-shown) + .lawyers__filter-label {
   transform: translateY(-45px);
 }
-.filter__wrapper:hover > .filter__icon {
+.filter__field:hover > .filter__icon {
   transform: translateY(-50%) rotate(90deg);
 }
+.filter__field:hover .filter__items-list {
+  opacity: 1;
+}
 @media screen and (min-width: 768px) {
-  .filter__wrapper {
+  .filter__field {
     width: 524px;
     height: 50px;
   }
@@ -510,6 +516,33 @@ img {
   transform: translateY(-50%);
   fill: var(--secondary-text-color);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filter__items-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: #EDEDED;
+  border-radius: 25px;
+  width: 100%;
+  padding: 5px 20px;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filter__item:not(:last-child) {
+  margin-bottom: 10px;
+}
+.filter__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.125;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  padding: 5px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filter__link:hover {
+  color: var(--accent-color);
 }
 
 .swiper {
