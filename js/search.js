@@ -40,11 +40,15 @@ lawyersCardList.innerHTML = createLawyersMarkup(search);
 function onFilterChange(e) {
   const filter = e.target.value.toLowerCase();
 
-  const filteredLawyers = searchAll.filter(({ name }) =>
-    name.toLowerCase().includes(filter)
+  const filteredLawyers = searchAll.filter(({ name, jobTitle, practiceArea, profileDescription}) =>
+    name.toLowerCase().includes(filter) || 
+    jobTitle.toLowerCase().includes(filter) ||  
+    practiceArea.toLowerCase().includes(filter) || 
+    profileDescription.toLowerCase().includes(filter) 
   );
 
   lawyersCardList.innerHTML = createLawyersMarkup(filteredLawyers);
 }
 
-filter.addEventListener("input", onFilterChange);
+
+filter.addEventListener('input', _.debounce(onFilterChange, 1500));
