@@ -1,8 +1,6 @@
 
-
-const ratings = document.querySelector(".rating"); 
+const ratings = document.querySelectorAll(".rating"); 
 if (ratings.length > 0) { 
-    console.log("ffff"); 
     initRatings();
 }
 

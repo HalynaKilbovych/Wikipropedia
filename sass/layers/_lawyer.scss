@@ -144,7 +144,7 @@
 .rating {
     display: flex;
     align-items: flex-end;
-    font-size: 40px;
+    font-size: 20px;
     line-height: 0.75;
 }
 .rating__body {
@@ -154,6 +154,7 @@
 .rating__body::before { 
     content: "★★★★★";
     display: block; 
+    color: var(--secondary-text-color);
 }
 .rating__active {
     position: absolute;
@@ -186,7 +187,7 @@
     opacity: 0;
 }
 .rating__value {
-    font-size: 50%;
+    font-size: 60%;
     line-height: 1;
-    padding-left: 10px;
+    padding-left: 5px;
 }

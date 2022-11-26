@@ -32,9 +32,22 @@ function createLawyersMarkup(lawyers) {
                 </div>
                 <div class="lawyers__card-content">
                     <p class="lawyers__card-name">${name}</p>
+                    <div class="rating">
+                    <div class="rating__body">
+                      <div class="rating__active">
+                        <div class="rating__items">
+                          <input type="radio" class="rating__item" value="1" name="rating">
+                          <input type="radio" class="rating__item" value="2" name="rating">
+                          <input type="radio" class="rating__item" value="3" name="rating">
+                          <input type="radio" class="rating__item" value="4" name="rating">
+                          <input type="radio" class="rating__item" value="5" name="rating">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="rating__value">${profileRating}</div>
+                  </div>
                     <p class="lawyers__card-specialization">${jobTitle}</p>
                     <p class="lawyers__card-practice-area">Practice area: ${practiceArea}</p>
-                    <p class="lawyers__card-rating">Rating: <span>${profileRating}</span></p>
                     <p class="lawyers__card-text-about">${profileDescription}</p> 
                     <p class="lawyers__card-address">${profileAddress}</p>
                 </div>
@@ -52,7 +65,7 @@ function onSearchChange(e) {
     return;
   }
   const searchedLawyers = searchAll.filter(
-    ({ name, jobTitle, practiceArea, profileDescription, profileAddress}) =>
+    ({ name, jobTitle, practiceArea, profileAddress}) =>
       name.toLowerCase().includes(searchEl) ||
       jobTitle.toLowerCase().includes(searchEl) ||
       practiceArea.toLowerCase().includes(searchEl) || 
@@ -73,3 +86,5 @@ function onSearchChange(e) {
   }
 }
 searchField.addEventListener('input', _.debounce(onSearchChange, 1000));
+
+
