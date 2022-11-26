@@ -103,28 +103,20 @@
                             </div>
                             <div class="lawyers__card-content">
                                 <p class="lawyers__card-name">Daniel Coriat</p>
-                                <ul class="lawyers__stars-list list">
-                                    <li class="lawyers__stars-item">                            
-                                    <svg class="lawyers__stars-icon" width="16" height="16">
-                                        <use href="./images/icons.svg#icon-star"></use>
-                                      </svg></li>
-                                    <li class="lawyers__stars-item">                            
-                                    <svg class="lawyers__stars-icon" width="16" height="16">
-                                        <use href="./images/icons.svg#icon-star"></use>
-                                      </svg></li>
-                                    <li class="lawyers__stars-item">                            
-                                    <svg class="lawyers__stars-icon" width="16" height="16">
-                                        <use href="./images/icons.svg#icon-star"></use>
-                                      </svg></li>
-                                    <li class="lawyers__stars-item">                            
-                                    <svg class="lawyers__stars-icon" width="16" height="16">
-                                        <use href="./images/icons.svg#icon-star"></use>
-                                      </svg></li>
-                                    <li class="lawyers__stars-item">                           
-                                    <svg class="lawyers__stars-icon" width="16" height="16">
-                                        <use href="./images/icons.svg#icon-star"></use>
-                                      </svg></li>
-                                </ul>
+                                <div class="rating">
+                                  <div class="rating__body">
+                                    <div class="rating__active">
+                                      <div class="rating__items">
+                                        <input type="radio" class="rating__item" value="1" name="rating">
+                                        <input type="radio" class="rating__item" value="2" name="rating">
+                                        <input type="radio" class="rating__item" value="3" name="rating">
+                                        <input type="radio" class="rating__item" value="4" name="rating">
+                                        <input type="radio" class="rating__item" value="5" name="rating">
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="rating__value">3.5</div>
+                                </div>
                                 <p class="lawyers__card-specialization">Trust & Estates, Asset Protection, Business Succession, Intellectual Property.</p>
                                 <p class="lawyers__card-practice-area">Trusts, Wills and living wills, Estate planning, Intellectual property</p>
                                 <p class="lawyers__card-text-about">Bluntly put, I am passionate about preventing others going through what I went. Estimates from the American Bar Association indicate that over 60% of the population is without proper estate planning.
@@ -891,7 +883,7 @@
 
     <script src="./js/menu.js" type="module"></script>
     <script src="./js/search.js" type="module"></script>
-    <script src="./js/filter.js" type="module"></script>
+    <script src="./js/rating.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/slider.js" type="module"></script>

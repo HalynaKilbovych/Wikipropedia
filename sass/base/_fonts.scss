@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'Arial';
     src: local('Arial Regular'), local('Arial-Regular'),
-        url('ArialMT.woff2') format('woff2'),
-        url('ArialMT.woff') format('woff'),
-        url('ArialMT.ttf') format('truetype');
+        url('/fonts/ArialMT.woff2') format('woff2'),
+        url('/fonts/ArialMT.woff') format('woff'),
+        url('/fonts/ArialMT.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
   }
 
   @font-face {
     font-family: 'Product Sans';
-    src: url('ProductSans-Regular.eot');
+    src: url('/fonts/ProductSans-Regular.eot');
     src: local('Product Sans'), local('ProductSans-Regular'),
-        url('ProductSans-Regular.eot?#iefix') format('embedded-opentype'),
-        url('ProductSans-Regular.woff') format('woff'),
-        url('ProductSans-Regular.ttf') format('truetype');
+        url('/fonts/ProductSans-Regular..eot?#iefix') format('embedded-opentype'),
+        url('/fonts/ProductSans-Regular.woff') format('woff'),
+        url('/fonts/ProductSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }

@@ -4,17 +4,27 @@ const searchField = document.querySelector('#search-field');
 const showMoreBtn = document.querySelector('.showMore');
 function createLawyersMarkup(lawyers) {
   return lawyers
-    .map(
-      ({
-        profilePhoto,
-        name,
-        jobTitle,
-        practiceArea,
-        profileRating,
-        profileDescription,
-        profileUrl,
-        profileAddress,
-      }) => `
+  .filter(lawyer => lawyer.profilePhoto !="/cdn/img/attorney-vatar.jpg")
+  .map(lawyer => {
+  if (lawyer.profileRating === 'N/A') {
+  lawyer.profileRating = 0
+  }
+  if (lawyer.profileAddress === 'N/A') {
+  lawyer.profileAddress = ''
+  }
+  return lawyer;
+  })
+  .map(
+  ({
+  profilePhoto,
+  name,
+  jobTitle,
+  practiceArea,
+  profileRating,
+  profileDescription,
+  profileUrl,
+  profileAddress,
+  })  =>`
             <li class="lawyers__card-item">
             <a href="${profileUrl}" class="lawyers__card-link link">
                 <div class="lawyers__image-wrapper">
@@ -42,7 +52,7 @@ function onSearchChange(e) {
     return;
   }
   const searchedLawyers = searchAll.filter(
-    ({ name, jobTitle, practiceArea, profileDescription }) =>
+    ({ name, jobTitle, practiceArea, profileDescription, profileAddress}) =>
       name.toLowerCase().includes(searchEl) ||
       jobTitle.toLowerCase().includes(searchEl) ||
       practiceArea.toLowerCase().includes(searchEl) || 
