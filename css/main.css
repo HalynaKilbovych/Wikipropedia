@@ -450,6 +450,16 @@ img {
   fill: #FFCF02;
 }
 
+.showMore {
+  display: none;
+  font-size: 15px;
+  max-width: 150px;
+  padding: 10px 25px;
+  line-height: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .filter-section {
   box-shadow: 3px 3px 20px rgba(141, 141, 141, 0.2);
 }

@@ -2,6 +2,7 @@ import { searchAll } from "./data.js";
 
 const lawyersCardList = document.querySelector(".lawyers__card-list");
 const searchField = document.querySelector("#search-field");
+const showMoreBtn = document.querySelector('.showMore');
 
 function createLawyersMarkup(lawyers) {
   return lawyers
@@ -35,6 +36,8 @@ function createLawyersMarkup(lawyers) {
     .join("");
 }
 
+let show = 0;
+
 function onSearchChange(e) { 
   e.preventDefault(); 
   const searchEl = e.target.value.toLowerCase();
@@ -46,6 +49,19 @@ function onSearchChange(e) {
   );
 
   lawyersCardList.innerHTML = createLawyersMarkup(searchedLawyers);
+
+  if (searchedLawyers.length > 12) {
+    onClickShowMore(),
+    (showMoreBtn.style.display = "block"),
+      showMoreBtn.addEventListener('click', onClickShowMore);
+
+    function onClickShowMore() {
+      show += 12;
+      lawyersCardList.innerHTML = createLawyersMarkup(
+        searchedLawyers.slice(0, show),
+      );
+    }
+  }
 }
 
 
