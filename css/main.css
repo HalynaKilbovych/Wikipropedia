@@ -458,6 +458,8 @@ img {
   line-height: 15px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 30px;
+  cursor: pointer;
 }
 
 .filter-section {

@@ -1,9 +1,7 @@
-import { searchAll } from "./data.js";
-
-const lawyersCardList = document.querySelector(".lawyers__card-list");
-const searchField = document.querySelector("#search-field");
+import { searchAll } from './data.js';
+const lawyersCardList = document.querySelector('.lawyers__card-list');
+const searchField = document.querySelector('#search-field');
 const showMoreBtn = document.querySelector('.showMore');
-
 function createLawyersMarkup(lawyers) {
   return lawyers
     .map(
@@ -15,7 +13,7 @@ function createLawyersMarkup(lawyers) {
         profileRating,
         profileDescription,
         profileUrl,
-        profileAddress, 
+        profileAddress,
       }) => `
             <li class="lawyers__card-item">
             <a href="${profileUrl}" class="lawyers__card-link link">
@@ -31,39 +29,37 @@ function createLawyersMarkup(lawyers) {
                     <p class="lawyers__card-address">${profileAddress}</p>
                 </div>
             </a>
-            </li>`
+            </li>`,
     )
-    .join("");
+    .join('');
 }
-
 let show = 0;
-
-function onSearchChange(e) { 
-  e.preventDefault(); 
+function onSearchChange(e) {
+  e.preventDefault();
   const searchEl = e.target.value.toLowerCase();
-
-  const searchedLawyers = searchAll.filter(({ name, jobTitle, practiceArea, profileDescription}) =>
-    name.toLowerCase().includes(searchEl) || 
-    jobTitle.toLowerCase().includes(searchEl) ||  
-    practiceArea.toLowerCase().includes(searchEl) 
+  if (searchEl.length === 0) {
+    location.reload();
+    return;
+  }
+  const searchedLawyers = searchAll.filter(
+    ({ name, jobTitle, practiceArea, profileDescription }) =>
+      name.toLowerCase().includes(searchEl) ||
+      jobTitle.toLowerCase().includes(searchEl) ||
+      practiceArea.toLowerCase().includes(searchEl) || 
+      profileAddress.toLowerCase().includes(searchEl) ,
   );
-
-  lawyersCardList.innerHTML = createLawyersMarkup(searchedLawyers);
-
   if (searchedLawyers.length > 12) {
     onClickShowMore(),
-    (showMoreBtn.style.display = "block"),
+      (showMoreBtn.style.display = 'block'),
       showMoreBtn.addEventListener('click', onClickShowMore);
-
     function onClickShowMore() {
       show += 12;
       lawyersCardList.innerHTML = createLawyersMarkup(
         searchedLawyers.slice(0, show),
       );
     }
+  } else {
+    lawyersCardList.innerHTML = createLawyersMarkup(searchedLawyers);
   }
 }
-
-
 searchField.addEventListener('input', _.debounce(onSearchChange, 1000));
-

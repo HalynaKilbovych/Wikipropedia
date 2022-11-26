@@ -25,10 +25,10 @@
     }
     &__field-wrapper { 
         position: relative;
-        &:hover .filter__label, 
-        &:focus .filter__label { 
-            transform: translateY(-65px);
-        }
+        // &:hover .filter__label, 
+        // &:focus .filter__label { 
+        //     transform: translateY(-65px);
+        // }
     }
     &__field { 
         position: relative;
@@ -50,23 +50,14 @@
         font-size: 14px;
         color: var(--secondary-text-color);
     }
-    &__label {
-        position: absolute;
-        top: 50%;
-        left: 20px;
-        z-index: 1;
-        @include fonts(400, 16px, 40px, 0.03em);
-        color: var(--secondary-text-color); 
-        transform: translateY(-50%);
-        transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-    }
-    // &__icon { 
+    // &__label {
     //     position: absolute;
-    //     right: 15px;
     //     top: 50%;
+    //     left: 20px;
+    //     z-index: 1;
+    //     @include fonts(400, 16px, 40px, 0.03em);
+    //     color: var(--secondary-text-color); 
     //     transform: translateY(-50%);
-    //     fill: var(--secondary-text-color);
     //     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); 
-
-    // }
+    }
 }
