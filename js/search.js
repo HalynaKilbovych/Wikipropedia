@@ -1,4 +1,3 @@
-import { search } from "./new.data.js";
 import { searchAll } from "./data.js";
 
 const lawyersCardList = document.querySelector(".lawyers__card-list");
@@ -15,9 +14,10 @@ function createLawyersMarkup(lawyers) {
         profileRating,
         profileDescription,
         profileUrl,
+        profileAddress, 
       }) => `
             <li class="lawyers__card-item">
-            <a href="" class="lawyers__card-link link">
+            <a href="${profileUrl}" class="lawyers__card-link link">
                 <div class="lawyers__image-wrapper">
                     <img src="https://www.wikipropedia.com${profilePhoto}" alt="">
                 </div>
@@ -27,15 +27,13 @@ function createLawyersMarkup(lawyers) {
                     <p class="lawyers__card-practice-area">Practice area: ${practiceArea}</p>
                     <p class="lawyers__card-rating">Rating: <span>${profileRating}</span></p>
                     <p class="lawyers__card-text-about">${profileDescription}</p> 
-                    <p class="lawyers__card-address">Address: N/A</p>
+                    <p class="lawyers__card-address">${profileAddress}</p>
                 </div>
             </a>
             </li>`
     )
     .join("");
 }
-
-lawyersCardList.innerHTML = createLawyersMarkup(search);
 
 function onSearchChange(e) { 
   e.preventDefault(); 
@@ -45,12 +43,11 @@ function onSearchChange(e) {
     name.toLowerCase().includes(searchEl) || 
     jobTitle.toLowerCase().includes(searchEl) ||  
     practiceArea.toLowerCase().includes(searchEl) 
-    // profileDescription.toLowerCase().includes(filter) 
   );
 
   lawyersCardList.innerHTML = createLawyersMarkup(searchedLawyers);
 }
 
 
-searchField.addEventListener('input', _.debounce(onSearchChange, 1500));
+searchField.addEventListener('input', _.debounce(onSearchChange, 1000));
 

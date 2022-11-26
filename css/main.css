@@ -403,7 +403,7 @@ img {
 .lawyers__image-wrapper {
   position: relative;
   margin-bottom: 20px;
-  width: 170px;
+  width: 112px;
   border-radius: 5px;
   overflow: hidden;
   box-shadow: 0px 4px 5px rgba(99, 99, 99, 0.25);
@@ -423,16 +423,23 @@ img {
 .lawyers__card-name:hover, .lawyers__card-name:focus {
   color: var(--link-color);
 }
-.lawyers__card-specialization {
-  font-size: 14px;
-}
-.lawyers__card-practice-area, .lawyers__card-rating, .lawyers__card-address, .lawyers__card-text-about {
+.lawyers__card-practice-area, .lawyers__card-rating, .lawyers__card-address, .lawyers__card-specialization {
   font-size: 14px;
   line-height: 20px;
   color: #616161;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.lawyers__card-practice-area:hover, .lawyers__card-practice-area:focus, .lawyers__card-rating:hover, .lawyers__card-rating:focus, .lawyers__card-address:hover, .lawyers__card-address:focus, .lawyers__card-text-about:hover, .lawyers__card-text-about:focus {
+.lawyers__card-practice-area:hover, .lawyers__card-practice-area:focus, .lawyers__card-rating:hover, .lawyers__card-rating:focus, .lawyers__card-address:hover, .lawyers__card-address:focus, .lawyers__card-specialization:hover, .lawyers__card-specialization:focus {
+  color: var(--link-color);
+}
+.lawyers__card-text-about {
+  font-size: 14px;
+  line-height: 20px;
+  color: #616161;
+}
+.lawyers__card-text-about span {
+  font-size: 14px;
+  line-height: 20px;
   color: var(--link-color);
 }
 .lawyers .lawyers__stars-list {
