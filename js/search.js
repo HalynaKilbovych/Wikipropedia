@@ -2,29 +2,32 @@ import { searchAll } from './data.js';
 const lawyersCardList = document.querySelector('.lawyers__card-list');
 const searchField = document.querySelector('#search-field');
 const showMoreBtn = document.querySelector('.showMore');
+const selectForm = document.querySelector('.filter__field');
+
 function createLawyersMarkup(lawyers) {
+
   return lawyers
-  .filter(lawyer => lawyer.profilePhoto !="/cdn/img/attorney-vatar.jpg")
-  .map(lawyer => {
-  if (lawyer.profileRating === 'N/A') {
-  lawyer.profileRating = 0
-  }
-  if (lawyer.profileAddress === 'N/A') {
-  lawyer.profileAddress = ''
-  }
-  return lawyer;
-  })
-  .map(
-  ({
-  profilePhoto,
-  name,
-  jobTitle,
-  practiceArea,
-  profileRating,
-  profileDescription,
-  profileUrl,
-  profileAddress,
-  })  =>`
+    .filter(lawyer => lawyer.profilePhoto != '/cdn/img/attorney-vatar.jpg')
+    .map(lawyer => {
+      if (lawyer.profileRating === 'N/A') {
+        lawyer.profileRating = 0;
+      }
+      if (lawyer.profileAddress === 'N/A') {
+        lawyer.profileAddress = '';
+      }
+      return lawyer;
+    })
+    .map(
+      ({
+        profilePhoto,
+        name,
+        jobTitle,
+        practiceArea,
+        profileRating,
+        profileDescription,
+        profileUrl,
+        profileAddress,
+      }) => `
             <li class="lawyers__card-item">
             <a href="${profileUrl}" class="lawyers__card-link link">
                 <div class="lawyers__image-wrapper">
@@ -56,6 +59,8 @@ function createLawyersMarkup(lawyers) {
     )
     .join('');
 }
+
+
 let show = 0;
 function onSearchChange(e) {
   e.preventDefault();
@@ -65,17 +70,44 @@ function onSearchChange(e) {
     return;
   }
   const searchedLawyers = searchAll.filter(
-    ({ name, jobTitle, practiceArea, profileAddress}) =>
+    ({ name, jobTitle, practiceArea, profileAddress }) =>
       name.toLowerCase().includes(searchEl) ||
       jobTitle.toLowerCase().includes(searchEl) ||
-      practiceArea.toLowerCase().includes(searchEl) || 
-      profileAddress.toLowerCase().includes(searchEl) ,
+      practiceArea.toLowerCase().includes(searchEl) ||
+      profileAddress.toLowerCase().includes(searchEl),
   );
+
   if (searchedLawyers.length > 12) {
     onClickShowMore(),
       (showMoreBtn.style.display = 'block'),
       showMoreBtn.addEventListener('click', onClickShowMore);
+
     function onClickShowMore() {
+      setTimeout(() => {
+        const ratings = document.querySelectorAll('.rating');
+        if (ratings.length > 0) {
+          initRatings();
+        }
+        function initRatings() {
+          let ratingActive, ratingValue;
+          for (let index = 0; index < ratings.length; index++) {
+            const rating = ratings[index];
+            initRating(rating);
+          }
+          function initRating(rating) {
+            initRatingVars(rating);
+            setRatingActiveWidth();
+          }
+          function initRatingVars(rating) {
+            ratingActive = rating.querySelector('.rating__active');
+            ratingValue = rating.querySelector('.rating__value');
+          }
+          function setRatingActiveWidth(index = ratingValue.textContent) {
+            const ratingActiveWidth = index / 0.05;
+            ratingActive.style.width = `${ratingActiveWidth}%`;
+          }
+        }
+      },0);
       show += 12;
       lawyersCardList.innerHTML = createLawyersMarkup(
         searchedLawyers.slice(0, show),
@@ -85,6 +117,14 @@ function onSearchChange(e) {
     lawyersCardList.innerHTML = createLawyersMarkup(searchedLawyers);
   }
 }
+
+
 searchField.addEventListener('input', _.debounce(onSearchChange, 1000));
 
+selectForm.addEventListener("change", onFilterSearch);
 
+function onFilterSearch(e) {
+  const selectedOptionValue = selectForm.value;
+
+  console.dir(selectedOptionValue)
+}
