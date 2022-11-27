@@ -2,7 +2,8 @@ import { searchAll } from './data.js';
 const lawyersCardList = document.querySelector('.lawyers__card-list');
 const searchField = document.querySelector('#search-field');
 const showMoreBtn = document.querySelector('.showMore');
-const selectForm = document.querySelector('.filter__field');
+const selectFormSpecialization = document.querySelector('#specialization');
+const selectFormLocation = document.querySelector('#location');
 
 function createLawyersMarkup(lawyers) {
 
@@ -76,7 +77,6 @@ function onSearchChange(e) {
       practiceArea.toLowerCase().includes(searchEl) ||
       profileAddress.toLowerCase().includes(searchEl),
   );
-
   if (searchedLawyers.length > 12) {
     onClickShowMore(),
       (showMoreBtn.style.display = 'block'),
@@ -118,13 +118,22 @@ function onSearchChange(e) {
   }
 }
 
-
 searchField.addEventListener('input', _.debounce(onSearchChange, 1000));
+selectFormSpecialization.addEventListener("change", onFilterSearchSpecialization,);
+selectFormSpecialization.addEventListener("change", _.debounce(onSearchChange, 1000));
+selectFormLocation.addEventListener("change", onFilterSearchLocation);
+selectFormLocation.addEventListener("change", _.debounce(onSearchChange, 1000));
 
-selectForm.addEventListener("change", onFilterSearch);
-
-function onFilterSearch(e) {
-  const selectedOptionValue = selectForm.value;
-
-  console.dir(selectedOptionValue)
+function onFilterSearchSpecialization() {
+  const selectedOptionValueSpecialization = selectFormSpecialization.value;
+  searchField.value = selectedOptionValueSpecialization;
+  searchField.scrollIntoView({behavior: "smooth"}); 
 }
+
+function onFilterSearchLocation() {
+  const selectedOptionValueLocation = selectFormLocation.value;
+  searchField.value = selectedOptionValueLocation; 
+  searchField.scrollIntoView({behavior: "smooth"}); 
+}
+
+
