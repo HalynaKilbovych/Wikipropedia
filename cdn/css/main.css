@@ -14,9 +14,9 @@
 @font-face {
   font-family: 'Arial';
   src: local('Arial Regular'), local('Arial-Regular'),
-      url('./cdn/fonts/ArialMT.woff2') format('woff2'),
-      url('./cdn/fonts/ArialMT.woff') format('woff'),
-      url('./cdn/fonts/ArialMT.ttf') format('truetype');
+      url('/cdn/fonts/ArialMT.woff2') format('woff2'),
+      url('/cdn/fonts/ArialMT.woff') format('woff'),
+      url('/cdn/fonts/ArialMT.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
@@ -25,9 +25,9 @@
   font-family: 'Product Sans';
   src: url('/cdn/fonts/ProductSans-Regular.eot');
   src: local('Product Sans'), local('ProductSans-Regular'),
-      url('./cdn/fonts/ProductSans-Regular.eot?#iefix') format('embedded-opentype'),
-      url('./cdn/fonts/ProductSans-Regular.woff') format('woff'),
-      url('./cdn/fonts/ProductSans-Regular.ttf') format('truetype');
+      url('/cdn/fonts/ProductSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('/cdn/fonts/ProductSans-Regular.woff') format('woff'),
+      url('/cdn/fonts/ProductSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
