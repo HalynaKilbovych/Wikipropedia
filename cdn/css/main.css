@@ -249,14 +249,14 @@ img {
 @media screen and (min-width: 768px) {
   .hero {
     padding: 70px 0;
-    background-image: url(../images/hero-bg-tab-min.svg);
+    background-image: url(./cdn/img/hero-bg-tab-min.svg);
     background-size: 445px 235px;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero {
     padding: 180px 0;
-    background-image: url(../images/hero-bg-pc-min.svg);
+    background-image: url(./cdn/img/hero-bg-pc-min.svg);
     background-size: 773px 415px;
   }
 }
@@ -533,7 +533,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .filter-section {
-    background-image: url(../images/search-bg-min.svg);
+    background-image: url(./cdn/img/search-bg-min.svg);
     background-repeat: no-repeat;
     background-position: right 50px center;
     background-size: 467px 328px;
