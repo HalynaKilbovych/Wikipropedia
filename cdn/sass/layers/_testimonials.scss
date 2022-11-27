@@ -29,16 +29,7 @@
         @include fonts(400, 16px, 20px, 0.03em);
         color: var(--secondary-text-color);
         font-style: italic;
-    }
-    &__stars { 
-        margin-bottom: 18px;
-    }
-    &__stars-list {
-        display: flex;
-        gap: 5px;
-    }
-    &__stars-icon {
-        fill: #FFCF02;
+        margin-top: 10px;
     }
 
 }
