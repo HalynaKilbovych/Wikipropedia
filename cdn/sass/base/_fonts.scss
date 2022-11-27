@@ -12,9 +12,9 @@
     font-family: 'Product Sans';
     src: url('/cdn/fonts/ProductSans-Regular.eot');
     src: local('Product Sans'), local('ProductSans-Regular'),
-        url('/cdn/fonts/ProductSans-Regular.eot?#iefix') format('embedded-opentype'),
-        url('/cdn/fonts/ProductSans-Regular.woff') format('woff'),
-        url('/cdn/fonts/ProductSans-Regular.ttf') format('truetype');
+        url('./cdn/fonts/ProductSans-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./cdn/fonts/ProductSans-Regular.woff') format('woff'),
+        url('./cdn/fonts/ProductSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
