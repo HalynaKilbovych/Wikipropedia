@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
     />
-    <link rel="stylesheet" href="cdn/css/main.css" />
+    <link rel="stylesheet" href="cdn/css/main.css">
   </head>
   <body>
     <header class="header">
@@ -41,20 +41,15 @@
         </nav>
 
         <button type="button" class="mob-menu__open-btn" data-menu-open>
-          <svg class="mob-menu__icon" width="30" height="30">
-            <use href="cdn/img/icons.svg#icon-menu_open"></use>
-          </svg>
+            <img src="./cdn/img/burger-menu.svg" alt="burger-menu" class="mob-menu__icon" width="30" height="30">
         </button>
 
         <div class="mob-menu is-hidden" data-menu>
           <div class="container">
             <div class="mob-menu__content">
               <button type="button" class="mob-menu__close-btn" data-menu-close>
-                <svg class="mob-menu__icon" width="30" height="30">
-                  <use href="сdn/img/icons.svg#icon-menu_close"></use>
-                </svg>
+                <img src="./cdn/img/burger-menu-close.svg" alt="menu-close" class="mob-menu__icon" width="30" height="30">
               </button>
-
               <nav class="mob-menu__navigation">
                 <ul class="mob-menu__navigation__list list">
                   <li class="mob-menu__navigation__item">
@@ -103,17 +98,15 @@
           <div class="lawyers__search-wrapper">
             <form class="lawyers__search">
               <div class="lawyers__search-field">
+                <img src="./cdn/img/search.svg" alt="search" class="lawyers__search-icon" width="18" height="18">
                 <input
                   type="text"
                   name="name"
                   id="search-field"
                   placeholder=" "
                   class="lawyers__search-input"
-                  required
-                />
-                <svg class="lawyers__search-icon" width="18" height="18">
-                  <use href="cdn/img/icons.svg#icon-search"></use>
-                </svg>
+                  required>
+                
               </div>
             </form>
           </div>

@@ -1,10 +1,10 @@
 @charset "UTF-8";
 :root {
   --text-color: #202124;
-  --accent-color: #8ba828;
+  --accent-color: #8BA828;
   --hover-accent-color: #799321;
-  --secondary-text-color: #4d5156;
-  --link-color: #1a0dab;
+  --secondary-text-color: #4D5156;
+  --link-color: #1A0DAB;
   --gap: 30px;
   --main-shadow: 6px 5px 10px rgba(210, 210, 210, 0.25);
   --secondary-shadow: 5px 5px 7px rgba(210, 210, 210, 0.25);
@@ -12,26 +12,18 @@
 }
 
 @font-face {
-  font-family: 'Arial';
-  src: local('Arial Regular'), local('Arial-Regular'),
-    url('../fonts/ArialMT.woff2') format('woff2'),
-    url('../fonts/ArialMT.woff') format('woff'),
-    url('../fonts/ArialMT.ttf') format('truetype');
+  font-family: "Arial";
+  src: local("Arial Regular"), local("Arial-Regular"), url("./cdn/fonts/ArialMT.woff2") format("woff2"), url("./cdn/fonts/ArialMT.woff") format("woff"), url("./cdn/fonts/ArialMT.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
 }
-
 @font-face {
-  font-family: 'Product Sans';
-  src: url('../fonts/ProductSans-Regular.eot');
-  src: local('Product Sans'), local('ProductSans-Regular'),
-    url('../fonts/ProductSans-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/ProductSans-Regular.woff') format('woff'),
-    url('../fonts/ProductSans-Regular.ttf') format('truetype');
+  font-family: "Product Sans";
+  src: url("./cdn/fonts/ProductSans-Regular.eot");
+  src: local("Product Sans"), local("ProductSans-Regular"), url("./cdn/fonts/ProductSans-Regular.eot?#iefix") format("embedded-opentype"), url("./cdn/fonts/ProductSans-Regular.woff") format("woff"), url("./cdn/fonts/ProductSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
-
 p,
 h1,
 h2,
@@ -48,7 +40,7 @@ ul {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 20px;
   color: var(--text-color);
 }
@@ -117,7 +109,7 @@ img {
 }
 
 .btn {
-  background: #8ba828;
+  background: #8BA828;
   box-shadow: var(--secondary-shadow);
   border: 1px solid var(--accent-color);
   border-radius: 30px;
@@ -126,8 +118,7 @@ img {
   font-size: 16px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.btn:hover,
-.btn:focus {
+.btn:hover, .btn:focus {
   background-color: #ffffff;
   color: var(--secondary-text-color);
 }
@@ -156,14 +147,14 @@ img {
 
 .mob-menu {
   position: fixed;
-  background-color: #fbfbfb;
+  background-color: #FBFBFB;
   z-index: 1;
   top: 0;
   right: 0;
   width: 70vw;
   height: 40vh;
   padding: 20px 15px 50px;
-  border: 1px solid #ededed;
+  border: 1px solid #EDEDED;
   border-radius: 5px;
   box-shadow: var(--main-shadow);
 }
@@ -171,8 +162,7 @@ img {
   width: 100%;
   height: 100%;
 }
-.mob-menu__close-btn,
-.mob-menu__open-btn {
+.mob-menu__close-btn, .mob-menu__open-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -180,16 +170,13 @@ img {
   background-color: var(--accent-color);
   border: none;
   border-radius: 5px;
-  fill: #ffffff;
+  color: #ffffff;
   width: 40px;
   height: 40px;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mob-menu__close-btn:hover,
-.mob-menu__close-btn:focus,
-.mob-menu__open-btn:hover,
-.mob-menu__open-btn:focus {
-  fill: #e7e7e7;
+.mob-menu__close-btn:hover, .mob-menu__close-btn:focus, .mob-menu__open-btn:hover, .mob-menu__open-btn:focus {
+  fill: #E7E7E7;
 }
 @media screen and (min-width: 768px) {
   .mob-menu__open-btn {
@@ -207,8 +194,7 @@ img {
   color: var(--text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.mob-menu__navigation__link:hover,
-.mob-menu__navigation__link:focus {
+.mob-menu__navigation__link:hover, .mob-menu__navigation__link:focus {
   color: var(--accent-color);
 }
 
@@ -241,8 +227,7 @@ img {
   padding: 32px 2px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.navigation__link:hover,
-.navigation__link:focus {
+.navigation__link:hover, .navigation__link:focus {
   color: var(--accent-color);
 }
 
@@ -282,7 +267,7 @@ img {
   }
 }
 .hero__title {
-  font-family: 'Product Sans', sans-serif;
+  font-family: "Product Sans", sans-serif;
   font-weight: 400;
   font-size: 30px;
   line-height: 1.4666666667;
@@ -344,7 +329,7 @@ img {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   background: rgba(255, 255, 255, 0.1);
-  border: 1px solid #ededed;
+  border: 1px solid #EDEDED;
   border-radius: 17px;
   transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -366,10 +351,12 @@ img {
   }
 }
 .lawyers__search-icon {
+  width: 18px;
+  height: 18px;
   position: absolute;
   left: 10px;
   top: 50%;
-  fill: #c9c9c9;
+  fill: #C9C9C9;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -428,7 +415,7 @@ img {
   position: relative;
 }
 .lawyers__card-name {
-  font-family: 'Product Sans';
+  font-family: "Product Sans";
   font-weight: 400;
   font-size: 18px;
   line-height: 1.0555555556;
@@ -436,27 +423,16 @@ img {
   color: var(--text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.lawyers__card-name:hover,
-.lawyers__card-name:focus {
+.lawyers__card-name:hover, .lawyers__card-name:focus {
   color: var(--link-color);
 }
-.lawyers__card-practice-area,
-.lawyers__card-rating,
-.lawyers__card-address,
-.lawyers__card-specialization {
+.lawyers__card-practice-area, .lawyers__card-rating, .lawyers__card-address, .lawyers__card-specialization {
   font-size: 14px;
   line-height: 20px;
   color: #616161;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.lawyers__card-practice-area:hover,
-.lawyers__card-practice-area:focus,
-.lawyers__card-rating:hover,
-.lawyers__card-rating:focus,
-.lawyers__card-address:hover,
-.lawyers__card-address:focus,
-.lawyers__card-specialization:hover,
-.lawyers__card-specialization:focus {
+.lawyers__card-practice-area:hover, .lawyers__card-practice-area:focus, .lawyers__card-rating:hover, .lawyers__card-rating:focus, .lawyers__card-address:hover, .lawyers__card-address:focus, .lawyers__card-specialization:hover, .lawyers__card-specialization:focus {
   color: var(--link-color);
 }
 .lawyers__card-text-about {
@@ -474,7 +450,7 @@ img {
   gap: 5px;
 }
 .lawyers .lawyers__stars-icon {
-  fill: #ffcf02;
+  fill: #FFCF02;
 }
 
 .showMore {
@@ -501,7 +477,7 @@ img {
 }
 
 .rating__body::before {
-  content: '★★★★★';
+  content: "★★★★★";
   display: block;
   color: var(--secondary-text-color);
 }
@@ -516,13 +492,13 @@ img {
 }
 
 .rating__active::before {
-  content: '★★★★★';
+  content: "★★★★★";
   position: absolute;
   width: 0%;
   height: 100%;
   top: 0;
   left: 0;
-  color: #ffcf02;
+  color: #FFCF02;
 }
 
 .rating__items {
@@ -586,14 +562,13 @@ img {
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
-  border: 1px solid #ededed;
+  border: 1px solid #EDEDED;
   border-radius: 25px;
   width: 100%;
   height: 50px;
   color: var(--secondary-text-color);
 }
-.filter__field:hover,
-.filter__field:focus {
+.filter__field:hover, .filter__field:focus {
   outline: 1px solid var(--accent-color);
 }
 @media screen and (min-width: 768px) {
@@ -616,7 +591,7 @@ img {
 .swiper {
   padding: 35px;
   max-width: 800px;
-  border: 1px solid #ededed;
+  border: 1px solid #EDEDED;
   border-radius: 7px;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -651,26 +626,15 @@ img {
   letter-spacing: 0.03em;
   color: var(--secondary-text-color);
   font-style: italic;
-}
-.swiper__stars {
-  margin-bottom: 18px;
-}
-.swiper__stars-list {
-  display: flex;
-  gap: 5px;
-}
-.swiper__stars-icon {
-  fill: #ffcf02;
+  margin-top: 10px;
 }
 
-.swiper-button-prev::after,
-.swiper-button-next::after {
+.swiper-button-prev::after, .swiper-button-next::after {
   font-size: 20px;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-  color: #d1d5d9;
+.swiper-button-prev, .swiper-button-next {
+  color: #D1D5D9;
 }
 
 .swiper-pagination {
@@ -682,11 +646,11 @@ img {
   height: 7px;
   line-height: 2;
   letter-spacing: 2;
-  background-color: #b3b3b3;
+  background-color: #B3B3B3;
 }
 
 .footer {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -697,4 +661,4 @@ img {
 }
 .footer__link {
   color: var(--link-color);
-} /*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */
