@@ -1,10 +1,10 @@
 @charset "UTF-8";
 :root {
   --text-color: #202124;
-  --accent-color: #8BA828;
+  --accent-color: #8ba828;
   --hover-accent-color: #799321;
-  --secondary-text-color: #4D5156;
-  --link-color: #1A0DAB;
+  --secondary-text-color: #4d5156;
+  --link-color: #1a0dab;
   --gap: 30px;
   --main-shadow: 6px 5px 10px rgba(210, 210, 210, 0.25);
   --secondary-shadow: 5px 5px 7px rgba(210, 210, 210, 0.25);
@@ -12,15 +12,22 @@
 }
 
 @font-face {
-  font-family: "Arial";
-  src: local("Arial Regular"), local("Arial-Regular"), url("./cdn/fonts/ArialMT.woff2") format("woff2"), url("./cdn/fonts/ArialMT.woff") format("woff"), url("./cdn/fonts/ArialMT.ttf") format("truetype");
+  font-family: 'Arial';
+  src: local('Arial Regular'), local('Arial-Regular'),
+    url('../fonts/ArialMT.woff2') format('woff2'),
+    url('../fonts/ArialMT.woff') format('woff'),
+    url('../fonts/ArialMT.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
-  font-family: "Product Sans";
-  src: url("./cdn/fonts/ProductSans-Regular.eot");
-  src: local("Product Sans"), local("ProductSans-Regular"), url("./cdn/fonts/ProductSans-Regular.eot?#iefix") format("embedded-opentype"), url("./cdn/fonts/ProductSans-Regular.woff") format("woff"), url("./cdn/fonts/ProductSans-Regular.ttf") format("truetype");
+  font-family: 'Product Sans';
+  src: url('../fonts/ProductSans-Regular.eot');
+  src: local('Product Sans'), local('ProductSans-Regular'),
+    url('../fonts/ProductSans-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/ProductSans-Regular.woff') format('woff'),
+    url('../fonts/ProductSans-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
