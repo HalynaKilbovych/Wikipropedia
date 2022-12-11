@@ -6,12 +6,12 @@
     background-size: 153px 300px; 
       @include tablet {
         padding: 70px 0;
-        background-image: url(../images/hero-bg-tab-min.svg);
+        background-image: url(../img/hero-bg-tab-min.svg);
         background-size: 445px 235px;
       }
       @include desktop {
         padding: 180px 0;
-        background-image:  url(../images/hero-bg-pc-min.svg);
+        background-image:  url(../img/hero-bg-pc-min.svg);
         background-size: 773px 415px;
       }
     &__content { 
